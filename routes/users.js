@@ -8,5 +8,11 @@ router.get('/frontpage', function(req, res, next) {
   res.render('frontpage.html');
   
 });
+router.get('/formpage', function(req, res, next) {
+  //  res.send('respond with a resource');
+  
+    res.render('formpage.html');
+    
+  });
 
 module.exports = router;
