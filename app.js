@@ -8,7 +8,11 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var frontpage= require('./routes/frontpage');
-var formpage= require('./routes/formpage')
+var formpage= require('./routes/formpage');
+var user= require('./routes/user');
+var table= require('./routes/table');
+var usertype= require('./routes/usertype');
+
 var app = express();
 
 // view engine setup
@@ -27,6 +31,10 @@ app.use('/users', usersRouter);
 app.use('/frontpage', frontpage);
 
 app.use('/formpage', formpage);
+app.use('/formpage', formpage);
+app.use('/user', user);
+app.use('/table', table);
+app.use('/usertype', usertype);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

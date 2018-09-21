@@ -15,4 +15,22 @@ router.get('/formpage', function(req, res, next) {
     
   });
 
+  router.get('/table', function(req, res, next) {
+    //  res.send('respond with a resource');
+    
+      res.render('table.html');
+      
+    });
+    router.get('/user', function(req, res, next) {
+      //  res.send('respond with a resource');
+      
+        res.render('user.html');
+        
+      });
+      router.get('/usertype', function(req, res, next) {
+        //  res.send('respond with a resource');
+        
+          res.render('usertype.html');
+          
+        });
 module.exports = router;
