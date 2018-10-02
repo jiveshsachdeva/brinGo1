@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-
+	<link rel="apple-touch-icon" sizes="76x76" href="image/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="image/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
 <title>bringo</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
 
+ 
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet" />
 
-    
+   
     <link href="stylesheets/paper-dashboard.css" rel="stylesheet"/>
 
+
+   
     <link href="stylesheets/themify-icons.css" rel="stylesheet">
 
 </head>
@@ -32,14 +35,9 @@
                     
                 </div>
     
+              
+                   
                 <ul class="nav">
-                    
-                    <li class="active">
-                        <a href="/bringo/userprofile">
-                            <i class="ti-user"></i>
-                            <p>User Profile</p>
-                        </a>
-                    </li>
                     <li>
                         <a href="/bringo/libraryrecord">
                             <i class="ti-view-list-alt"></i>
@@ -47,13 +45,13 @@
                         </a>
                     </li>
                     <li>
-                   <li>
-                        <a href="/bringo/user">
+                   
+                    <li class="active">
+                        <a href="/bringo/user/uploadnotes">
                             <i class="ti-list"></i>
-                            <p>users</p>
+                            <p>upload notes</p>
                         </a>
                     </li>
-                    <li>
     
                 </ul>
             </div>
@@ -112,40 +110,28 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-5">
                         <div class="card card-user">
-                            <div class="image">
-                                <img src="image/background.jpg" alt="..."/>
+                            
+                          <div class="header">
+                                <h4 class="title">Rank</h4>
                             </div>
-                            <div class="content">
-                                <div class="author">
-                                  <img class="avatar border-white" src="image/face-2.jpg" alt="..."/>
-                                  <h4 class="title">Chet Faker<br />
-                                     <a href="#"><small>@chetfaker</small></a>
-                                  </h4>
-                                </div>
-                                <p class="description text-center">
-                                    "I like the way you work it <br>
-                                    No diggity <br>
-                                    I wanna bag it up"
-                                </p>
-                            </div>
-                            <hr>
+                            
                             <div class="text-center">
                                 <div class="row">
                                     <div class="col-md-3 col-md-offset-1">
-                                        <h5>4<br /><small>Books </small></h5>
+                                        <h5>4<br /><small>hakos</small></h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <h5>0<br /><small>issued</small></h5>
+                                        <h5>0<br /><small>University Rank</small></h5>
                                     </div>
                                     <div class="col-md-3">
-                                        <h5>0<br /><small>Fine</small></h5>
+                                        <h5>0<br /><small>public rank</small></h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
                             <div class="header">
-                                <h4 class="title">Book isssued</h4>
+                                <h4 class="title">Status</h4>
                             </div>
                             
 
@@ -153,17 +139,18 @@
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-striped">
                                     <thead>
-                                        <th>ID</th>
-                                    	<th>Name</th>
-                                    	<th>Book Name</th>
-                                    	<th>Book Id</th>
+                                        <th>subject</th>
+                                    
+                                    	<th>topic</th>
+                                    	<th>Date</th>
+                                    	<th>Approved</th>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                        	<td>1</td>
-                                        	<td>abhishek</td>
                                         	<td>java</td>
-                                                <td>1234</td>
+                                        	<td>inheritence</td>
+                                        	<td>12/2/2016</td>
+                                                <td>yes</td>
                                         	</tr>
                                     </tbody>
                                 </table>
@@ -176,7 +163,7 @@
                     <div class="col-lg-8 col-md-7">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Edit Profile</h4>
+                                <h4 class="title">Upload file</h4>
                             </div>
                             <div class="content">
                                 <form>
@@ -190,72 +177,30 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Username</label>
-                                                <input type="text" class="form-control border-input" placeholder="Username" value=" ">
+                                                <input type="text" class="form-control border-input"  disabled placeholder="Username" value="username">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control border-input" placeholder="Email">
+                                                <input type="email" class="form-control border-input"  disabled placeholder="Email" value="Email">
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>First Name</label>
-                                                <input type="text" class="form-control border-input" placeholder="Company" value=" ">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Last Name</label>
-                                                <input type="text" class="form-control border-input" placeholder="Last Name" value=" ">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Address</label>
-                                                <input type="text" class="form-control border-input" placeholder="Home Address" value=" ">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
+                                    
+                                    
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>City</label>
-                                                <input type="text" class="form-control border-input" placeholder="City" value=" ">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Country</label>
-                                                <input type="text" class="form-control border-input" placeholder="Country" value=" ">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Postal Code</label>
-                                                <input type="number" class="form-control border-input" placeholder="ZIP Code">
+                                                
+                                                <input type="file" class="form-control border-input" multiple>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>About Me</label>
-                                                <textarea rows="5" class="form-control border-input" placeholder="Here can be your description" value="Mike"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
+                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Upload</button>
                                     </div>
                                     <div class="clearfix"></div>
                                 </form>
@@ -275,25 +220,23 @@
                     <ul>
 
                         <li>
-                            <a href="http://www.creative-tim.com">
-                                Creative Tim
+                            Bringo
+                            
+                        </li>
+                        <li>
+                            
+                            @2018
                             </a>
                         </li>
                         <li>
-                            <a href="http://blog.creative-tim.com">
-                               Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.creative-tim.com/license">
+                           
+                            
                                 Licenses
                             </a>
                         </li>
                     </ul>
                 </nav>
-				<div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
-                </div>
+			
             </div>
         </footer>
 
@@ -303,23 +246,21 @@
 
 </body>
 
-   
+    
     <script src="javascripts/jquery.min.js" type="text/javascript"></script>
 	<script src="javascripts/bootstrap.min.js" type="text/javascript"></script>
 
 	<script src="javascripts/bootstrap-checkbox-radio.js"></script>
 
-	
 	<script src="javascripts/chartist.min.js"></script>
 
+   
     <script src="javascripts/bootstrap-notify.js"></script>
 
-   
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 	<script src="javascripts/paper-dashboard.js"></script>
 
-	
 	<script src="javascripts/demo.js"></script>
 
 </html>

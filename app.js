@@ -4,14 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
 var logger = require('morgan');
-
+var upload= require('./routes/upload');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var frontpage= require('./routes/frontpage');
-var formpage= require('./routes/formpage');
-var user= require('./routes/user');
-var table= require('./routes/table');
-var usertype= require('./routes/usertype');
 
 var app = express();
 
@@ -25,16 +19,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/bringo', express.static(path.join(__dirname, 'public')));
+app.use('/bringo/user', express.static(path.join(__dirname, 'public')));
+app.use('/bringo/user/teacher', express.static(path.join(__dirname, 'public')));
+app.use('/bringo/user/student', express.static(path.join(__dirname, 'public')));
+app.use('/upload', upload);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/frontpage', frontpage);
 
-app.use('/formpage', formpage);
-app.use('/formpage', formpage);
-app.use('/user', user);
-app.use('/table', table);
-app.use('/usertype', usertype);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
