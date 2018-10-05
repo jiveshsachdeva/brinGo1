@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
 var logger = require('morgan');
-var upload= require('./routes/upload');
+require('./app_server/models/db');
 var indexRouter = require('./routes/index');
 
 var app = express();
@@ -24,7 +24,7 @@ app.use('/bringo', express.static(path.join(__dirname, 'public')));
 app.use('/bringo/user', express.static(path.join(__dirname, 'public')));
 app.use('/bringo/user/teacher', express.static(path.join(__dirname, 'public')));
 app.use('/bringo/user/student', express.static(path.join(__dirname, 'public')));
-app.use('/upload', upload);
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
